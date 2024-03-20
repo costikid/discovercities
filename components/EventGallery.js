@@ -1,6 +1,8 @@
 // components/EventGallery.js
 
 import { useState } from 'react';
+import Image from 'next/image'
+
 
 const EventGallery = ({ fetchPhotosByLocation }) => {
   const [events, setEvents] = useState([]);
@@ -34,7 +36,8 @@ const EventGallery = ({ fetchPhotosByLocation }) => {
     <div>
       <input type="text" value={locationQuery} onChange={(e) => setLocationQuery(e.target.value)} placeholder="Enter city" />
       <button onClick={handleSearch}>Search</button>
-      <button onClick={handleFetchPhotos}>Fetch Photos</button>
+      
+      
       {events.length > 0 && ( // Only render if events are available
         <div>
           <h2>{events[currentIndex].name}</h2>
@@ -42,7 +45,7 @@ const EventGallery = ({ fetchPhotosByLocation }) => {
           {/* Render event images */}
           <div>
             {events[currentIndex].images && events[currentIndex].images.length > 0 && (
-              <img src={events[currentIndex].images[0].url} alt={events[currentIndex].name} /> // Show the first image
+              <Image src={events[currentIndex].images[0].url} alt={events[currentIndex].name} /> // Show the first image
             )}
           </div>
           {/* Add more event details as needed */}

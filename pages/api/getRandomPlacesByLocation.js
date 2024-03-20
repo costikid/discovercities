@@ -7,6 +7,7 @@ const apiKey = process.env.YELP_API_KEY;
 
 const client = yelp.client(apiKey);
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
   try {
     const { location } = req.query;

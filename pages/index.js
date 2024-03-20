@@ -3,6 +3,7 @@ import ProductGallery from '../components/ProductGallery';
 import RestaurantGallery from '../components/RestaurantGallery';
 
 import EventGallery from '../components/EventGallery'; // Import the new EventGallery component
+import CombinedGallery from '../components/CombinedGallery';
 
 export default function Home() {
   const [state] = useState(); // Using useState to resolve the warning
@@ -17,7 +18,8 @@ export default function Home() {
       <h2>Restaurants</h2>
       <RestaurantGallery /> 
       {/* Render the EventGallery component */}
-    
+      <h2>Combined</h2>
+      <CombinedGallery />
     </div>
   );
 }
