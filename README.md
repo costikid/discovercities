@@ -32,3 +32,5 @@ https://docs.developer.yelp.com/docs/fusion-intro
 https://unsplash.com/developers
 
 https://developer.ticketmaster.com/
+
+By the way, remember the free versions of these APIs have daily limits. 
